@@ -217,4 +217,4 @@ nuevasHabilidades cazador (x:xs) = nuevasHabilidades (agregarHabilidad1 cazador 
 situacionMultiple :: a->b->(a->b->a)->[a]->[a]
 situacionMultiple valor1 valor2 funcion lista = map(\elem -> funcion elem valor2) lista
 
---de todas las armas del mundo ahora se que el am
+--
