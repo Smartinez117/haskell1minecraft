@@ -28,7 +28,6 @@ data Respiraciones = UnaRespiracion{
     fuerzaRespiracion :: Float
 }deriving (Show,Ord,Eq) 
 
-
 --declaracion de variables
 espadaCarmesi,mundoTransparente,estadoDesinteresado,marcaDeCazador,ojoQueTodoLoRecuerda :: Habilidades
 espadaCarmesi = "espadaCarmesi"
@@ -66,16 +65,16 @@ sanemi    = UnCazador "sanemi"              respiracionViento  1400  1250 [mundo
 
 muzan,kokushibo,akaza,douma :: Demonio 
 muzan     = UnDemonio "muzan" "progenitor"           10000 4000 []
-kokushibo = UnDemonio "michokatsu" "creacionEspadas" 8000 3000 [marcaDeCazador,mundoTransparente]
-akaza     = UnDemonio "akaza" "aguja"                7000 2500 []
-douma     = UnDemonio "douma" "manipulacionHielo"    7500 2800 []
+kokushibo = UnDemonio "michokatsu" "creacionEspadas" 8000 3000  [marcaDeCazador,mundoTransparente]
+akaza     = UnDemonio "akaza" "aguja"                7000 2500  []
+douma     = UnDemonio "douma" "manipulacionHielo"    7500 2800  []
 
 -- declaraciones y funciones para el calculo de poder para cazadores y demonios 
 fuerzaArte :: Demonio -> Float
 fuerzaArte demonio
- | arteDemoniaco demonio == "progenitor" = 5
- | arteDemoniaco demonio == "creacionEspadas" = 4
- | arteDemoniaco demonio == "aguja" = 2
+ | arteDemoniaco demonio == "progenitor"        = 5
+ | arteDemoniaco demonio == "creacionEspadas"   = 4
+ | arteDemoniaco demonio == "aguja"             = 2
  | arteDemoniaco demonio == "manipulacionHielo" = 3
  | otherwise = 1
 
@@ -217,4 +216,4 @@ nuevasHabilidades cazador (x:xs) = nuevasHabilidades (agregarHabilidad1 cazador 
 situacionMultiple :: a->b->(a->b->a)->[a]->[a]
 situacionMultiple valor1 valor2 funcion lista = map(\elem -> funcion elem valor2) lista
 
---de todas las armas del mundo ahora se que el am
+--
