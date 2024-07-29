@@ -1,0 +1,21 @@
+##################################################################################
+NOTAS DE GIT YA QUE NO TENGO EL OJO QUE TODO LO RECUERDA
+##################################################################################
+
+#Eliminar archivo enlace git
+rm -rf .git
+
+#Agregar enlace al repositorio remoto
+git remote add origin https://github.com/Smartinez117/haskell1minecraft.git
+
+#Pasar a rama main
+git branch -M main
+
+#Agregar todos los archivos al stage
+git add *
+
+#Commit a los cambios
+git commit -m "mensaje"
+
+#Al comienzo usar esto para subir los cambios al repo remoto
+git push -u origin main
