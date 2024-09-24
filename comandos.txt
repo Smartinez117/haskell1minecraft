@@ -19,3 +19,6 @@ git commit -m "mensaje"
 
 #Al comienzo usar esto para subir los cambios al repo remoto
 git push -u origin main
+
+#para ver a que repositorio esta enlasado usar:
+git remote -v
